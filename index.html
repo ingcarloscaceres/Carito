@@ -1,84 +1,49 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>Hormiga 3D en Realidad Aumentada</title>
-
-  <!-- Componente oficial model-viewer -->
-  <script type="module"
-    src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
-  </script>
-
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: #f5f5f5;
-      color: #1f1f1f;
-    }
-    .wrap {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 16px;
-    }
-    h1 { font-size: 1.6rem; margin: 6px 0 8px; }
-    p { line-height: 1.45; }
-    model-viewer {
-      width: 100%;
-      height: 62vh;
-      min-height: 420px;
-      background: white;
-      border-radius: 18px;
-      box-shadow: 0 8px 30px rgba(0,0,0,.10);
-    }
-    .ar-button {
-      background: #111;
-      color: white;
-      border: 0;
-      border-radius: 999px;
-      padding: 13px 20px;
-      font-size: 16px;
-      font-weight: 700;
-      cursor: pointer;
-      box-shadow: 0 4px 14px rgba(0,0,0,.18);
-    }
-    .note {
-      font-size: .92rem;
-      color: #555;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Hormiga realista 3D | Realidad Aumentada</title>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#f4f4f4;color:#171717}
+main{max-width:760px;margin:auto;padding:14px}
+h1{font-size:1.55rem;margin:5px 0}
+.intro{margin:4px 0 12px;color:#444}
+model-viewer{width:100%;height:68vh;min-height:440px;background:#fff;border-radius:18px;box-shadow:0 8px 28px #0002}
+#ar-button{border:0;border-radius:999px;padding:14px 20px;background:#111;color:#fff;font-weight:750;font-size:16px;box-shadow:0 5px 18px #0003}
+.credit{font-size:.78rem;color:#666;line-height:1.35;margin:12px 4px}
+</style>
 </head>
 <body>
-  <main class="wrap">
-    <h1>🐜 Hormiga 3D</h1>
-    <p>Gírala con el dedo. Luego pulsa <strong>Ver en realidad aumentada</strong> para colocarla sobre una mesa o el piso.</p>
+<main>
+<h1>🐜 Hormiga en 3D</h1>
+<p class="intro">Gírala con el dedo o colócala en tu espacio usando la cámara.</p>
 
-    <model-viewer
-      src="hormiga.glb"
-      alt="Modelo 3D de una hormiga"
-      camera-controls
-      touch-action="pan-y"
-      auto-rotate
-      shadow-intensity="1"
-      exposure="1"
-      ar
-      ar-modes="webxr scene-viewer"
-      ar-scale="auto"
-      camera-orbit="35deg 72deg 2.8m"
-      min-camera-orbit="auto auto 1.2m"
-      max-camera-orbit="auto auto 6m">
+<model-viewer
+ src="hormiga.glb"
+ alt="Modelo 3D realista de una hormiga"
+ camera-controls
+ touch-action="pan-y"
+ auto-rotate
+ shadow-intensity="1.2"
+ shadow-softness="0.8"
+ exposure="1"
+ environment-image="neutral"
+ ar
+ ar-modes="webxr scene-viewer"
+ ar-placement="floor"
+ ar-scale="auto"
+ camera-orbit="35deg 70deg auto"
+ min-camera-orbit="auto auto 35%"
+ max-camera-orbit="auto auto 400%">
+ <button id="ar-button" slot="ar-button">📷 Ver en realidad aumentada</button>
+</model-viewer>
 
-      <button class="ar-button" slot="ar-button">
-        📷 Ver en realidad aumentada
-      </button>
-    </model-viewer>
-
-    <p class="note">
-      Requisitos: abrir desde Chrome/Android mediante una URL HTTPS. 
-      Si la RA no se activa, el modelo 3D debe seguir viéndose dentro de la página.
-    </p>
-  </main>
+<p class="credit">
+Modelo 3D “ANT” de MAXDESIGN-3D, utilizado bajo licencia Creative Commons Attribution (CC BY).
+</p>
+</main>
 </body>
 </html>
