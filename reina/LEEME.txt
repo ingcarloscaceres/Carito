@@ -1,0 +1,19 @@
+HORMIGA REINA - WEBAR
+
+Crea dentro del repositorio Carito una carpeta llamada:
+reina
+
+Sube dentro de /reina:
+- index.html
+- reina-hormiga.glb
+
+La URL resultante será:
+https://ingcarloscaceres.github.io/Carito/reina/
+
+La escala se ha corregido dentro del GLB para permitir:
+- mover
+- girar
+- cambiar tamaño
+
+IMPORTANTE:
+Conserva la atribución CC BY del creador del modelo original.
