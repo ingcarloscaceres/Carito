@@ -1,0 +1,13 @@
+HORMIGA SOLDADO - WEBAR
+
+En el repositorio Carito crea la carpeta:
+soldado
+
+Sube dentro:
+- index.html
+- soldado-hormiga.glb
+
+URL:
+https://ingcarloscaceres.github.io/Carito/soldado/
+
+La escala está incorporada dentro del GLB para permitir mover, girar y redimensionar en RA.
