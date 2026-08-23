@@ -1,0 +1,5 @@
+MACHO V2
+Reemplaza el contenido de /macho/ por:
+index.html
+macho-hormiga-v2.glb
+URL: https://ingcarloscaceres.github.io/Carito/macho/?v=2
