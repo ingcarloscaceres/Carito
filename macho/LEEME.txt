@@ -1,0 +1,9 @@
+MACHO V3.2
+
+Reemplaza en /Carito/macho/:
+- index.html
+- macho-hormiga-v3-2.glb
+
+Esta versión calcula los ejes reales del modelo antes de colocar las alas.
+URL de prueba:
+https://ingcarloscaceres.github.io/Carito/macho/?v=32
